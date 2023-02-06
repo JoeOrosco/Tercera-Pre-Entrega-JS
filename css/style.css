@@ -1,0 +1,267 @@
+:root{
+    --colorTextos: gray;
+    --primary-color: #021832;
+    --secondary-color: #caa169;
+    --bg-color: #f4f4f4;
+    --bg-white: #fff;
+    --bg-black: #000;
+
+    /* text color */
+    --primary-text: #021832;
+    --secondary-text: #caa169;
+    --text-white: #fff;
+    --text-black: #151515;
+    --text-gray: #e4e4e4;
+}
+
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* texto encima del video */
+
+.promo {
+    padding-top: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.promo h1 {
+    color: bisque;
+    text-shadow:
+        0 0 5px #000,
+        0 0 10px #000,
+        0 0 20px #000,
+        0 0 40px #000,
+        0 0 80px #000,
+        0 0 90px #000,
+        0 0 100px #000,
+        0 0 150px #000;
+}
+
+.promo p {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    text-shadow:
+        0 0 5px #000,
+        0 0 10px #000,
+        0 0 20px #000,
+        0 0 40px #000,
+        0 0 80px #000,
+        0 0 90px #000,
+        0 0 100px #000,
+        0 0 150px #000;
+}
+
+.promo button{
+    display: inline-block;
+    height: 50px;
+    border-radius: 35px;
+    padding: 10px;
+    width: 200px;
+    background-color: orange;
+    font-size: 1.3rem;
+    color: #1c1c1d;
+    font-weight: 800;
+    transition: 150ms;
+    margin-top: 40px;
+}
+
+.promo button a{
+    text-decoration: none;
+    color: #1c1c1d;
+}
+
+.promo button a:hover{
+    color: #e4e4e4;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    transform: translate(0, -5px);
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c1c1d;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+}
+
+
+
+body{
+    background-color: whitesmoke;
+}
+
+header{
+    z-index: 100;
+}
+
+.description{
+    height: 115px;
+    overflow: hidden;
+}
+
+.tab-content img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tab-content h2{
+    text-shadow: 
+    0 0 5px #caa169,
+        0 0 10px #caa169,
+        0 0 20px #caa169,
+        0 0 40px #caa169;    
+}
+
+
+/* estilos de mi reserva */
+.submenu{
+    position: relative;
+}
+
+.submenu #reserva{
+    display: none;
+}
+
+.submenu:hover #reserva{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4e4b5076;
+    padding: 20px;
+    min-height: 500px;
+    width: 480px; 
+}
+
+
+table {
+    width: 100%;
+}
+
+th{
+    color: #fff;
+}
+
+td{
+    color:#fff;
+}
+
+/* boton de borrar una habitacion */
+.borrar {
+    background-color: #e45d34;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+}
+
+.btn-2{
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #e85123;
+    color: #dfdde0;
+    font-size: 14px;
+    margin-top: 25px;
+    border-radius: 25px;
+}
+
+.btn-2:hover{
+    background-color: #c23b11;
+}
+
+.table-habitaciones{
+    display: flex
+}
+
+.table-cantidad > input{
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 15px;
+    font-weight: 650;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.submenu #reserva h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.itemCartTotal{
+    font-size: 20px;
+}
+
+.btnConfirmar{
+    font-size: 15px;
+}
+
+
+@media (max-width: 476px) {
+    .submenu:hover #reserva{
+        display: block;
+        position: absolute;
+        right: 0;
+        backdrop-filter: blur(10px);
+        top: 100%;
+        z-index: 1;
+        background-color: #4e4b5076;
+        padding: 20px;
+        min-height: 500px;
+        width: 370px; 
+    }
+
+    .submenu:hover #reserva .mi-reserva-carrito input{
+        width: 15px;
+        font-size: 15px;
+    }
+
+    .submenu:hover #reserva .mi-reserva-carrito button{
+        font-size: 8px;
+    }
+}
+
+
+
+
+
+
