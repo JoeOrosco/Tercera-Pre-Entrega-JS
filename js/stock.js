@@ -1,3 +1,7 @@
+/*
+El array de objetos que contiene las propiedades de las habitaciones que se pueden reservar.
+*/
+
 const habitaciones = [
     {
         id: 1,
