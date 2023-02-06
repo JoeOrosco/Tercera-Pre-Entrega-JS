@@ -1,4 +1,6 @@
-
+/*
+ -> El codigo donde se simula una reservacion de habitaciones, en este caso cuenta con un maximo de 8 habitaciones a reservar. 
+*/
 
 const contenedor = document.querySelector('#contenedor')
 const contenedorCarrito = document.querySelector('#contenedor-carrito')
@@ -22,6 +24,10 @@ contenedorCarrito.addEventListener('click', (e) => {
     }
 })
 
+/* 
+ -> En el boton CONFIRMAR que se muestra, al hacerle click este al usuario le permitira empezar otra ves por si quiere hacer otra reserva.
+ -> Por ahora no puse niguna alerta de la calse de librerias que vimos la clase anterio, pienso hacerlo para el proyecto final. 
+*/
 confimarReserva.addEventListener('click', (e) =>{
     console.log(e.target)
     contenedorCarrito.innerHTML = ''
@@ -29,6 +35,12 @@ confimarReserva.addEventListener('click', (e) =>{
     guardarReserva(reservas)
     actualizarTotalesCarrito()
 })
+
+/*
+ -> En pintarReservaCarrito si el usuario reserva una de las habitaciones se se sumara en Mi Reserva en la pagina llegando al maximo de 8,
+ porque son 8 las habitacones, sin embargo si el usuario hace muchas reservaciones en la misma habitacion se le sumara la cantidad dentro de Mi Reserva (cantidad/noches),
+ donde se ve el nombre de habitacino, cantidad/noches, precio y X de opcion para eliminar una reserva.
+*/
 
 const pintarReservaCarrito = (id) => {
 
@@ -64,10 +76,10 @@ const pintarReservaCarrito = (id) => {
         contenedorCarrito.appendChild(tr)
     }
 
-    
     actualizarTotalesCarrito()
     guardarReserva(reservas)
 }
+
 
 function actualizarTotalesCarrito(){
     reservaContendor.textContent = reservas.length
